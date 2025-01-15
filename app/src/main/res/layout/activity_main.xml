@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:padding="25dp"
+        android:text="@string/unit_converter"
+        android:textColor="@color/dark_blue"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
+
+
+    <LinearLayout
+        android:id="@+id/bigbox"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="68dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+         <LinearLayout
+            android:id="@+id/input_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/output_container"
+            app:layout_constraintTop_toTopOf="@id/bigbox"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.196">
+
+
+            <EditText
+                android:id="@+id/frombox"
+                android:layout_width="120dp"
+                android:background="@color/white"
+                android:layout_height="50dp"
+                android:hint="@string/enter_number"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+
+            <Spinner
+                android:id="@+id/fromSpinner"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/output_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/input_container"
+            app:layout_constraintBottom_toBottomOf="@id/bigbox"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.196">
+
+            <EditText
+                android:id="@+id/tobox"
+                android:layout_width="120dp"
+                android:background="@color/white"
+                android:layout_height="50dp"
+                android:hint="@string/conversion"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <Spinner
+                android:id="@+id/toSpinner"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:spinnerMode="dropdown"
+                />
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

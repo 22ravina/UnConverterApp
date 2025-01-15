@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UnConverter</string>
+    <string name="to">To:</string>
+    <string name="from">From:</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="output_will_be_show_here">Output will be show here</string>
+    <string name="eg_100">eg:100</string>
+    <string name="enter_number">Enter number</string>
+    <string name="conversion">Conversion</string>
+</resources>
